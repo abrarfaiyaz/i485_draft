@@ -1,0 +1,132 @@
+
+\documentclass{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{times}
+
+
+
+
+
+\input{variables.tex}
+
+\newcounter{labelcounter}
+\newcommand{\centerlabel}[1]{
+\stepcounter{labelcounter}
+\newpage
+
+    \thispagestyle{empty}
+    \begin{center}
+        \vspace*{\fill}
+        \Huge Exhibit-\thelabelcounter \\ \vspace{1cm} \large #1
+        \vspace*{\fill}
+    \end{center}
+    \newpage
+}
+\newenvironment{pdf}[1]
+{\centerlabel{#1}}
+
+
+\date{\today}
+
+\signature{\pApplicant \\\dAddress\\\dCity, \dState - \dZip}
+\address{\pApplicant \\\dAddress,\\\dCity, \dState - \dZip}
+
+\begin{document}
+% \include{variables}
+\begin{letter}{\USCISaddress
+
+\vspace{0.5cm}
+
+\textbf{RE: Application for Adjustment of Status (Based on Approved I-140 NIW EB-2 Petition)
+for \textit{\pApplicant} (\Anum) \& \textit{\dApplicant} (Spouse) as nationals of Bangladesh }
+% Application of Employment Authorization for \textit{\dApplicant}
+\vspace{0.5cm}
+
+\textbf{Principal Applicant:} \pApplicant  ({Type:} \textbf{I-485})\\
+\textbf{Derivative Applicant (Spouse):} \dApplicant  ({Type:} \textbf{I-485 \& I-765})\\
+\textbf{Nature of Submission:} Original Submission \\
+
+}
+
+
+
+
+
+
+\opening{Dear Immigration Officer,}
+
+
+I, \textbf{\pApplicant}, along with  my wife \textbf{\dApplicant} are submitting our application to Register Permanent Residence or Adjust Status (I-485) based on my approved NIW Employment-Based I-140, Immigration Petition for Alien Worker (\textbf{Priority Date \priorityDate} and \textbf{Receipt Number \ReceiptNumber}).\textbf{\dApplicant} is also applying for \textbf{Employment Authorization (Form I-765)} together with her adjustment of status application.
+
+
+
+The index of exhibits will guide you to principal and derivative applicant's list of documents submitted for both of our application. The documents of the Principal and Derviate Applicant is in separate packets for your convenience.
+
+\vspace{1.5cm}
+\textit{Sincerely,}
+
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{1.5cm}
+\textbf{\pApplicant,} \\
+\textit{\pAddress} \\
+\pCity \\
+Phone: \pPhone \\
+e-mail: \pEmail \\
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{1.5cm}
+\begin{flushright}
+\textbf{\dApplicant} \\
+Phone: \dPhone \\
+e-mail: \dEmail
+\end{flushright}
+\end{minipage}
+
+\end{letter}
+
+\begin{center}
+\textbf{INDEX OF EXHIBITS}\\
+\end{center}
+\input{principal_applicant_list_of_doc}
+\vspace{1.5cm}
+\input{dervative_applicant_list_of_doc}
+\vfill
+
+\textit{Thank you for your consideration of the above application. Please do not hesitate to contact us should you have any questions regarding this adjustment application.}
+
+\begin{minipage}[t]{0.5\textwidth}
+
+\vspace{2cm}
+\textbf{\pApplicant} \\
+\pAddress\\
+\pCity, \pState - \pZip\\
+Phone: \pPhone \\
+\pEmail \\
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{2cm}
+\begin{flushright}
+\textbf{\dApplicant} \\
+\dAddress\\
+\dCity, \dState - \dZip\\
+Phone: \dPhone \\
+\dEmail\\
+\end{flushright}
+\end{minipage}
+
+
+%%%% INCLUDE THE EVIDENCES %%%%%%%%
+\input{evidence_p_applicant}
+
+\input{evidences_d_applicant}
+
+
+
+\end{document}
